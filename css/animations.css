@@ -1,0 +1,206 @@
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATIONS.CSS — Keyframes, scroll reveal, hover transitions
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Keyframes ─── */
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+
+@keyframes scroll-line {
+  0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+  40%  { opacity: 1; transform: scaleY(1); transform-origin: top; }
+  60%  { opacity: 1; transform: scaleY(1); transform-origin: bottom; }
+  100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes edge-flow {
+  0%, 100% { opacity: 0.25; }
+  50%       { opacity: 0.85; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ─── Scroll Reveal System ─── */
+/* Elements start hidden and animate in when the IntersectionObserver fires */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay helpers */
+.reveal-d1 { transition-delay: 80ms; }
+.reveal-d2 { transition-delay: 160ms; }
+.reveal-d3 { transition-delay: 240ms; }
+.reveal-d4 { transition-delay: 320ms; }
+.reveal-d5 { transition-delay: 400ms; }
+
+/* ─── Hero entry animation ─── */
+/* Applied on initial page load only (class added by JS after a tick) */
+
+.hero-content.loaded .hero-badge    { animation: fade-in-up 0.6s ease both; }
+.hero-content.loaded .reveal-d1     { animation: fade-in-up 0.6s 0.1s ease both; }
+.hero-content.loaded .reveal-d2     { animation: fade-in-up 0.6s 0.2s ease both; }
+.hero-content.loaded .reveal-d3     { animation: fade-in-up 0.6s 0.3s ease both; }
+.hero-content.loaded .reveal-d4     { animation: fade-in-up 0.6s 0.4s ease both; }
+.hero-content.loaded .reveal-d5     { animation: fade-in-up 0.6s 0.5s ease both; }
+
+/* Reset reveal state for hero items (handled by load animation instead) */
+.hero-content .reveal {
+  opacity: 0;
+}
+
+/* ─── Canvas ─── */
+.hero-canvas {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero-canvas.ready {
+  opacity: 1;
+}
+
+/* ─── Neural diagram SVG ─── */
+.neural-diagram .nn-node {
+  transition: fill-opacity 0.3s ease;
+}
+
+/* ─── Card hover micro-interactions ─── */
+.project-card {
+  will-change: transform;
+}
+
+.achievement-card {
+  will-change: transform;
+}
+
+/* ─── Skill bar animation ─── */
+.skill-fill {
+  will-change: width;
+}
+
+/* ─── Blog card arrow ─── */
+.blog-arrow {
+  display: inline-block;
+  will-change: transform;
+  transition: transform var(--t-base);
+}
+
+/* ─── Theme transition ─── */
+/* Smooth transition for all color changes when theme switches */
+* {
+  transition:
+    background-color var(--t-slow),
+    border-color var(--t-slow),
+    color var(--t-slow);
+}
+
+/* Exclude elements that should not have color transitions */
+.btn,
+.nav-link,
+.project-link,
+.footer-social-link,
+.contact-channel,
+.tech-tag,
+.back-to-top,
+.theme-toggle,
+.blog-arrow,
+.scroll-progress,
+.hero-canvas {
+  transition: unset;
+}
+
+.btn {
+  transition:
+    background-color var(--t-base),
+    border-color var(--t-base),
+    color var(--t-base),
+    box-shadow var(--t-base),
+    transform var(--t-fast);
+}
+
+.nav-link {
+  transition: color var(--t-base), background var(--t-base);
+}
+
+.project-link,
+.footer-social-link,
+.back-to-top,
+.theme-toggle {
+  transition:
+    color var(--t-base),
+    border-color var(--t-base),
+    background var(--t-base);
+}
+
+.contact-channel {
+  transition: border-color var(--t-base), background var(--t-base), transform var(--t-base);
+}
+
+.tech-tag {
+  transition: background var(--t-base), color var(--t-base), border-color var(--t-base);
+}
+
+.blog-arrow {
+  transition: transform var(--t-base), color var(--t-base);
+}
+
+.scroll-progress {
+  transition: width 50ms linear;
+}
+
+.hero-canvas {
+  transition: opacity 1.2s ease;
+}
+
+/* ─── Loading shimmer for theme-sensitive elements ─── */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-2) 25%,
+    var(--bg-3) 50%,
+    var(--bg-2) 75%
+  );
+  background-size: 200% auto;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* ─── Float animation for hero decorative elements ─── */
+.float {
+  animation: float 4s ease-in-out infinite;
+}

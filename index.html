@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Machine Learning Engineer — building production AI systems, neural architectures, and research tooling.">
+  <meta name="keywords" content="machine learning engineer, AI, deep learning, MLOps, PyTorch, portfolio, CV">
+  <meta name="author" content="Samoilov Mikhail">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0c0b09">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Samoilov Mikhail — DS / ML Engineer">
+  <meta property="og:description" content="Building production AI systems from research to deployment.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Samoilov Mikhail — DS / ML Engineer">
+  <meta name="twitter:description" content="Building production AI systems from research to deployment.">
+
+  <title>Samoilov Mikhail — DS / ML Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav-inner container">
+
+      <a href="#" class="nav-logo" aria-label="Samoilov Mikhail — back to top">
+        <span class="nav-logo-mark" aria-hidden="true">MS</span>
+        <span class="nav-logo-name">Mikhail Samoilov</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="#projects" class="nav-link" data-section="projects">Work</a></li>
+          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <div class="resume-group" role="group" aria-label="Download resume">
+          <a href="#" class="btn-resume" aria-label="Download English resume">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            CV EN
+          </a>
+          <a href="#" class="btn-resume" aria-label="Download Russian resume">CV RU</a>
+        </div>
+
+        <button class="nav-hamburger" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-mobile" id="navMobile" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="nav-mobile-close" id="navMobileClose" aria-label="Close navigation menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav aria-label="Mobile navigation">
+      <ul class="nav-mobile-links" role="list">
+        <li><a href="#projects" class="nav-mobile-link">Work</a></li>
+        <li><a href="#skills" class="nav-mobile-link">Skills</a></li>
+        <li><a href="#experience" class="nav-mobile-link">Experience</a></li>
+        <li><a href="#contact" class="nav-mobile-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="resume-group" role="group" aria-label="Download resume" style="width:100%;justify-content:center">
+      <a href="#" class="btn-resume" aria-label="Download English resume" style="flex:1;justify-content:center">CV EN</a>
+      <a href="#" class="btn-resume" aria-label="Download Russian resume" style="flex:1;justify-content:center">CV RU</a>
+    </div>
+  </div>
+  <div class="nav-mobile-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════ MAIN CONTENT ═══════════════════════════ -->
+  <main id="main">
+
+    <!-- ───────── 1. HERO ───────── -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero-content container">
+        <div class="hero-grid">
+
+          <!-- Left: identity text -->
+          <div class="hero-identity">
+            <div class="hero-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              Currently at Yandex Search
+            </div>
+
+            <h1 class="hero-name reveal reveal-d1">Mikhail Samoilov<span class="cursor" aria-hidden="true"></span></h1>
+
+            <p class="hero-role reveal reveal-d2">DS / ML Engineer</p>
+
+            <p class="hero-degree reveal reveal-d2">
+              B.S. CS · ROSBIOTECH &nbsp;·&nbsp; M.S. CS · HSE (2026)
+            </p>
+
+            <p class="hero-bio reveal reveal-d3">
+              I build ML systems for large-scale search problems — currently working on antispam at Yandex Search. Background in biophysics at MIPT; now pursuing CS. Drawn to the intersection of rigorous math and systems that ship.
+            </p>
+
+            <div class="hero-cta reveal reveal-d4">
+              <a href="#projects" class="btn btn-primary btn-lg">
+                View my work
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost btn-lg">Get in touch</a>
+            </div>
+
+            <div class="hero-links reveal reveal-d5" aria-label="Social links">
+              <a href="https://github.com/Samoilov2004" class="hero-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://linkedin.com" class="hero-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://t.me/samoilov_ma" class="hero-link" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              </a>
+              <a href="https://www.kaggle.com/samoilovmikhail" class="hero-link" aria-label="Kaggle" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"/></svg>
+              </a>
+              <a href="https://leetcode.com/u/Cro-Magnon/" class="hero-link" aria-label="LeetCode" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: photo -->
+          <div class="hero-photo-wrap reveal reveal-d2">
+            <div class="hero-photo">
+              <div class="photo-frame">
+                <div class="photo-bg" aria-hidden="true"></div>
+                <!-- Replace SVG below with: <img src="your-photo.jpg" alt="Mikhail Samoilov" class="photo-silhouette"> -->
+                <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 280 308" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="ph-glow" cx="50%" cy="38%" r="52%">
+                      <stop offset="0%" stop-color="rgba(0,212,255,0.09)"/>
+                      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+                    </radialGradient>
+                  </defs>
+                  <rect width="280" height="308" fill="url(#ph-glow)"/>
+                  <circle cx="140" cy="106" r="54" fill="rgba(0,212,255,0.05)" stroke="rgba(0,212,255,0.12)" stroke-width="1"/>
+                  <path d="M 28 308 C 32 228 82 186 140 186 C 198 186 248 228 252 308 Z" fill="rgba(0,212,255,0.03)" stroke="rgba(0,212,255,0.08)" stroke-width="1"/>
+                  <rect x="14" y="14" width="252" height="280" rx="18" fill="none" stroke="rgba(0,212,255,0.07)" stroke-width="1" stroke-dasharray="5 5"/>
+                </svg>
+              </div>
+            </div>
+            <p class="photo-hint-label">[ your photo here ]</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── 2. EXPERIENCE + EDUCATION ───────── -->
+    <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Background</span>
+          <h2 class="section-heading" id="experience-heading">My journey</h2>
+        </div>
+
+        <!-- Tab navigation -->
+        <div class="exp-tabs reveal" role="tablist" aria-label="Background sections">
+          <button class="exp-tab exp-tab--active" data-tab="work" role="tab" id="tab-btn-work" aria-selected="true" aria-controls="tab-work">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Work
+          </button>
+          <button class="exp-tab" data-tab="education" role="tab" id="tab-btn-education" aria-selected="false" aria-controls="tab-education">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Education
+          </button>
+        </div>
+
+        <!-- ── Work Tab ── -->
+        <div class="exp-panel" id="tab-work" role="tabpanel" aria-labelledby="tab-btn-work">
+        <div class="timeline" role="list">
+
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot timeline-dot--active"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-head-left">
+                  <div class="timeline-logo" aria-hidden="true">
+                    <img src="assets/logos/yandex.svg" alt="">
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">ML Engineer — Search Antispam</h3>
+                    <span class="timeline-company">Yandex</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">April 2025 — Present</span>
+                  <span class="timeline-location">Moscow, Russia</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Working on antispam systems for Yandex Search. Building and maintaining ML models to detect and filter search spam at production scale.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">ML</span>
+                <span class="tech-badge">Search</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal reveal-d1" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line timeline-line--last"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-head-left">
+                  <div class="timeline-logo" aria-hidden="true">
+                    <img src="assets/logos/yandex.svg" alt="">
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">ML Engineer — Search Antifraud</h3>
+                    <span class="timeline-company">Yandex</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">Feb 2025 — April 2025</span>
+                  <span class="timeline-location">Moscow, Russia</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Worked on antifraud systems for Yandex Search, developing and improving ML models to detect fraudulent activity in search traffic.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">ML</span>
+                <span class="tech-badge">Antifraud</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </div><!-- /tab-work -->
+
+        <!-- ── Education Tab ── -->
+        <div class="exp-panel exp-panel--hidden" id="tab-education" role="tabpanel" aria-labelledby="tab-btn-education">
+        <div class="timeline" role="list">
+
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-head-left">
+                  <div class="timeline-logo" aria-hidden="true">
+                    <div class="timeline-logo" aria-hidden="true">
+                      <img src="assets/logos/hse.svg" alt="">
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">M.S. Computer Science</h3>
+                    <span class="timeline-company">HSE — Higher School of Economics, Moscow</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">2026 — 2028</span>
+                  <span class="timeline-location">Planned</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Upcoming master's programme in Computer Science.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal reveal-d1" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot timeline-dot--active"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-head-left">
+                  <div class="timeline-logo" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">B.S. Computer Science</h3>
+                    <span class="timeline-company">ROSBIOTECH, Moscow</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">2024 — 2026</span>
+                  <span class="timeline-location">Moscow, Russia</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Bachelor's programme in Computer Science. Currently enrolled.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-badge">Algorithms</span>
+                <span class="tech-badge">Machine Learning</span>
+                <span class="tech-badge">Computer Science</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal reveal-d2" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-head-left">
+                  <div class="timeline-logo" aria-hidden="true">
+                    <div class="timeline-logo" aria-hidden="true">
+                      <img src="assets/logos/mipt.svg" alt="">
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">B.S. Biophysics</h3>
+                    <span class="timeline-company">MIPT — Moscow Institute of Physics and Technology</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">2022 — 2024</span>
+                  <span class="timeline-location">Moscow, Russia</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Studied biophysics with a strong mathematical and scientific foundation. Coursework in physics, mathematics, and computational modelling.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-badge">Biophysics</span>
+                <span class="tech-badge">Mathematics</span>
+                <span class="tech-badge">Computational Modelling</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal reveal-d3" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line timeline-line--last"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <div class="timeline-head-left">
+                  <div class="timeline-logo" aria-hidden="true">
+                    <div class="timeline-logo" aria-hidden="true">
+                      <img src="assets/logos/school_cpm.svg" alt="">
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">High School</h3>
+                    <span class="timeline-company">CPM Private School, Moscow</span>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period">until 2022</span>
+                  <span class="timeline-location">Moscow, Russia</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Graduated from CPM Private School in Moscow with a focus on informatics and natural sciences (major chemistry).
+              </p>
+            </div>
+          </div>
+
+        </div>
+        </div><!-- /tab-education -->
+
+      </div>
+    </section>
+
+    <!-- ───────── 3. PROJECTS ───────── -->
+    
+    <!-- ───────── 4. SKILLS ───────── -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-heading" id="skills-heading">Tools of the trade</h2>
+          <p class="section-sub">Frameworks, languages, and platforms I rely on when building production data science and ML systems.</p>
+        </div>
+
+        <div class="skills-layout reveal">
+
+          <!-- ML / AI Frameworks -->
+          <div>
+            <span class="skills-category-label">ML / AI Frameworks</span>
+            <div class="skill-cards" role="list">
+              <div class="skill-card" role="listitem" title="PyTorch">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" class="skill-icon" alt="PyTorch" loading="lazy">
+                <span class="skill-name">PyTorch</span>
+              </div>
+              <div class="skill-card" role="listitem" title="TensorFlow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" class="skill-icon" alt="TensorFlow" loading="lazy">
+                <span class="skill-name">TensorFlow</span>
+              </div>
+              <div class="skill-card" role="listitem" title="scikit-learn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" class="skill-icon" alt="scikit-learn" loading="lazy">
+                <span class="skill-name">sklearn</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Keras">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg" class="skill-icon" alt="Keras" loading="lazy">
+                <span class="skill-name">Keras</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Hugging Face">
+                <img src="https://cdn.simpleicons.org/huggingface/FFD21E" class="skill-icon" alt="Hugging Face" loading="lazy">
+                <span class="skill-name">HuggingFace</span>
+              </div>
+              <div class="skill-card" role="listitem" title="JAX / Flax">
+                <span class="skill-icon skill-icon-text" aria-hidden="true">JAX</span>
+                <span class="skill-name">JAX / Flax</span>
+              </div>
+              <div class="skill-card" role="listitem" title="ONNX">
+                <img src="https://cdn.simpleicons.org/onnx/005CED" class="skill-icon" alt="ONNX" loading="lazy">
+                <span class="skill-name">ONNX</span>
+              </div>
+              <div class="skill-card" role="listitem" title="LangChain">
+                <span class="skill-icon skill-icon-text" aria-hidden="true">LC</span>
+                <span class="skill-name">LangChain</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Science -->
+          <div>
+            <span class="skills-category-label">Data Science</span>
+            <div class="skill-cards" role="list">
+              <div class="skill-card" role="listitem" title="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="skill-icon" alt="Python" loading="lazy">
+                <span class="skill-name">Python</span>
+              </div>
+              <div class="skill-card" role="listitem" title="NumPy">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="skill-icon" alt="NumPy" loading="lazy">
+                <span class="skill-name">NumPy</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Pandas">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="skill-icon" alt="Pandas" loading="lazy">
+                <span class="skill-name">Pandas</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Jupyter">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" class="skill-icon" alt="Jupyter" loading="lazy">
+                <span class="skill-name">Jupyter</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Matplotlib">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="skill-icon" alt="Matplotlib" loading="lazy">
+                <span class="skill-name">Matplotlib</span>
+              </div>
+              <div class="skill-card" role="listitem" title="XGBoost">
+                <span class="skill-icon skill-icon-text" aria-hidden="true">XGB</span>
+                <span class="skill-name">XGBoost</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Apache Spark">
+                <img src="https://cdn.simpleicons.org/apachespark/E25A1C" class="skill-icon" alt="Apache Spark" loading="lazy">
+                <span class="skill-name">Spark</span>
+              </div>
+              <div class="skill-card" role="listitem" title="SQL">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" class="skill-icon" alt="SQL" loading="lazy">
+                <span class="skill-name">SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure & MLOps -->
+          <div>
+            <span class="skills-category-label">Infrastructure &amp; MLOps</span>
+            <div class="skill-cards" role="list">
+              <div class="skill-card" role="listitem" title="Docker">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="skill-icon" alt="Docker" loading="lazy">
+                <span class="skill-name">Docker</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Kubernetes">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" class="skill-icon" alt="Kubernetes" loading="lazy">
+                <span class="skill-name">Kubernetes</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Redis">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" class="skill-icon" alt="Redis" loading="lazy">
+                <span class="skill-name">Redis</span>
+              </div>
+              <div class="skill-card" role="listitem" title="PostgreSQL">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="PostgreSQL" loading="lazy">
+                <span class="skill-name">PostgreSQL</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Apache Kafka">
+                <img src="https://cdn.simpleicons.org/apachekafka/00B4D8" class="skill-icon" alt="Apache Kafka" loading="lazy">
+                <span class="skill-name">Kafka</span>
+              </div>
+              <div class="skill-card" role="listitem" title="AWS">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" class="skill-icon" alt="AWS" loading="lazy">
+                <span class="skill-name">AWS</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Google Cloud">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" class="skill-icon" alt="GCP" loading="lazy">
+                <span class="skill-name">GCP</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Git">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="skill-icon" alt="Git" loading="lazy">
+                <span class="skill-name">Git</span>
+              </div>
+              <div class="skill-card" role="listitem" title="MLflow">
+                <img src="https://cdn.simpleicons.org/mlflow/0194E2" class="skill-icon" alt="MLflow" loading="lazy">
+                <span class="skill-name">MLflow</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Weights &amp; Biases">
+                <img src="https://cdn.simpleicons.org/weightsandbiases/FFBE00" class="skill-icon" alt="W&B" loading="lazy">
+                <span class="skill-name">W&amp;B</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Ray">
+                <span class="skill-icon skill-icon-text" aria-hidden="true">RAY</span>
+                <span class="skill-name">Ray</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Triton">
+                <span class="skill-icon skill-icon-text" aria-hidden="true">TRT</span>
+                <span class="skill-name">Triton</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div>
+            <span class="skills-category-label">Languages</span>
+            <div class="skill-cards" role="list">
+              <div class="skill-card" role="listitem" title="C++">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="skill-icon" alt="Python" loading="lazy">
+                <span class="skill-name">Python</span>
+              </div>
+              <div class="skill-card" role="listitem" title="TypeScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" class="skill-icon" alt="C" loading="lazy">
+                <span class="skill-name">C</span>
+              </div>
+              <div class="skill-card" role="listitem" title="C++">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="skill-icon" alt="C++" loading="lazy">
+                <span class="skill-name">C++</span>
+              </div>
+              <div class="skill-card" role="listitem" title="Bash">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" class="skill-icon" alt="Bash" loading="lazy">
+                <span class="skill-name">Bash</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── 5. CONTACT ───────── -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-heading" id="contact-heading">Let's build something<br>worth building.</h2>
+          <p class="section-sub">Open to research collaborations, interesting projects, and conversations about ML systems. If you're working on a hard problem, I'd love to hear about it.</p>
+        </div>
+
+        <div class="contact-grid reveal">
+
+          <a href="mailto:kryiska9@gmail.com" class="contact-card-new">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <span class="contact-card-label">Email</span>
+            <span class="contact-card-value">kryiska9@gmail.com</span>
+          </a>
+
+          <a href="https://t.me/samoilov_ma" class="contact-card-new" target="_blank" rel="noopener noreferrer">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </div>
+            <span class="contact-card-label">Telegram</span>
+            <span class="contact-card-value">@samoilov_ma</span>
+          </a>
+
+          <a href="https://linkedin.com" class="contact-card-new" target="_blank" rel="noopener noreferrer">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <span class="contact-card-label">LinkedIn</span>
+            <span class="contact-card-value">linkedin.com</span>
+          </a>
+
+          <a href="https://github.com/Samoilov2004" class="contact-card-new" target="_blank" rel="noopener noreferrer">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <span class="contact-card-label">GitHub</span>
+            <span class="contact-card-value">github.com/Samoilov2004</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="Mikhail Samoilov — back to top">
+            <span class="nav-logo-mark" aria-hidden="true">MS</span>
+            <span class="nav-logo-name">Mikhail Samoilov</span>
+          </a>
+          <p class="footer-tagline">Building intelligent systems,<br>one model at a time.</p>
+          <div class="footer-social" role="list" aria-label="Social links">
+            <a href="https://github.com/Samoilov2004" class="footer-social-link" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://t.me/samoilov_ma" class="footer-social-link" aria-label="Telegram profile" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Pages</span>
+            <a href="#projects" class="footer-nav-link">Work</a>
+            <a href="#skills" class="footer-nav-link">Skills</a>
+            <a href="#experience" class="footer-nav-link">Experience</a>
+            <a href="#contact" class="footer-nav-link">Contact</a>
+          </div>
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Projects</span>
+            <a href="#" class="footer-nav-link">Dont foget to add my project names</a>
+          </div>
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Connect</span>
+            <a href="https://github.com/Samoilov2004" class="footer-nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com" class="footer-nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://t.me/samoilov_ma" class="footer-nav-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="mailto:kryiska9@gmail.com" class="footer-nav-link">Email</a>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">2026 Mikhail Samoilov. Designed and built by hand, claude, codex, qwen etc.</p>
+        <p class="footer-made">Funny block.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top of page">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/animations.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
