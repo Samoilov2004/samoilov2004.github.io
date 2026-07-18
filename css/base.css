@@ -222,3 +222,16 @@ svg { flex-shrink: 0; }
   background-clip: text;
   background-size: 200% auto;
 }
+
+.timeline-logo .logo-light,
+.timeline-logo .logo-dark {
+  display: none;
+}
+
+html[data-theme="light"] .timeline-logo .logo-light {
+  display: block;
+}
+
+html[data-theme="dark"] .timeline-logo .logo-dark {
+  display: block;
+}
