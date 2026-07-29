@@ -49,13 +49,13 @@ function initNav() {
 
     sections.forEach(section => {
       const top = section.offsetTop - 100;
-      if (scrollY >= top) {
-        activeSection = section.id;
+      if (scrollY >= top && (!activeSection || section.offsetTop > activeSection.offsetTop)) {
+        activeSection = section;
       }
     });
 
     links.forEach(link => {
-      if (link.dataset.section === activeSection) {
+      if (link.dataset.section === activeSection?.id) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
       } else {
@@ -243,6 +243,55 @@ function initExpTabs() {
   tabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab.dataset.tab)));
 }
 
+/* ─── Selected Highlights Tabs ─── */
+
+function initHighlightsTabs() {
+  const tablist = document.querySelector('.highlights-tabs');
+  if (!tablist) return;
+
+  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+  const panels = Array.from(document.querySelectorAll('.highlights-panel'));
+
+  function activateTab(target, moveFocus = false) {
+    const activeTab = tabs.find(tab => tab.dataset.highlightTab === target);
+    if (!activeTab) return;
+
+    tabs.forEach(tab => {
+      const selected = tab === activeTab;
+      tab.classList.toggle('highlights-tab--active', selected);
+      tab.setAttribute('aria-selected', selected ? 'true' : 'false');
+      tab.tabIndex = selected ? 0 : -1;
+    });
+
+    panels.forEach(panel => {
+      panel.hidden = panel.id !== `highlights-panel-${target}`;
+    });
+
+    if (moveFocus) activeTab.focus();
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activateTab(tab.dataset.highlightTab));
+
+    tab.addEventListener('keydown', event => {
+      let nextIndex = null;
+
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = tabs.length - 1;
+      if (nextIndex === null) return;
+
+      event.preventDefault();
+      activateTab(tabs[nextIndex].dataset.highlightTab, true);
+    });
+  });
+
+  document.querySelectorAll('[data-highlight-target]').forEach(link => {
+    link.addEventListener('click', () => activateTab(link.dataset.highlightTarget));
+  });
+}
+
 function initResearchMap() {
   const el = document.getElementById('researchMap');
   if (!el) return;
@@ -289,5 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initContactForm();
   initExpTabs();
+  initHighlightsTabs();
   initResearchExpand();
 });

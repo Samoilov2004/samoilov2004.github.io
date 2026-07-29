@@ -46,9 +46,9 @@
 
       <nav aria-label="Primary navigation">
         <ul class="nav-links" role="list">
-          <li><a href="#projects" class="nav-link" data-section="projects">Work</a></li>
-          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
           <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+          <li><a href="#highlights" class="nav-link" data-section="highlights">Highlights</a></li>
+          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
           <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
         </ul>
       </nav>
@@ -65,7 +65,7 @@
         </button>
 
         <div class="resume-group" role="group" aria-label="Download resume">
-          <a href="#" class="btn-resume" aria-label="Download English resume">
+          <a href="latex_cv/Mikhail_Samoilov_CV_EN.pdf" class="btn-resume" aria-label="Download English resume" download>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -73,7 +73,7 @@
             </svg>
             CV EN
           </a>
-          <a href="#" class="btn-resume" aria-label="Download Russian resume">CV RU</a>
+          <a href="latex_cv/Mikhail_Samoilov_CV_RU.pdf" class="btn-resume" aria-label="Download Russian resume" download>CV RU</a>
         </div>
 
         <button class="nav-hamburger" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMobile">
@@ -92,15 +92,15 @@
     </button>
     <nav aria-label="Mobile navigation">
       <ul class="nav-mobile-links" role="list">
-        <li><a href="#projects" class="nav-mobile-link">Work</a></li>
-        <li><a href="#skills" class="nav-mobile-link">Skills</a></li>
         <li><a href="#experience" class="nav-mobile-link">Experience</a></li>
+        <li><a href="#highlights" class="nav-mobile-link">Highlights</a></li>
+        <li><a href="#skills" class="nav-mobile-link">Skills</a></li>
         <li><a href="#contact" class="nav-mobile-link">Contact</a></li>
       </ul>
     </nav>
     <div class="resume-group" role="group" aria-label="Download resume" style="width:100%;justify-content:center">
-      <a href="#" class="btn-resume" aria-label="Download English resume" style="flex:1;justify-content:center">CV EN</a>
-      <a href="#" class="btn-resume" aria-label="Download Russian resume" style="flex:1;justify-content:center">CV RU</a>
+      <a href="latex_cv/Mikhail_Samoilov_CV_EN.pdf" class="btn-resume" aria-label="Download English resume" style="flex:1;justify-content:center" download>CV EN</a>
+      <a href="latex_cv/Mikhail_Samoilov_CV_RU.pdf" class="btn-resume" aria-label="Download Russian resume" style="flex:1;justify-content:center" download>CV RU</a>
     </div>
   </div>
   <div class="nav-mobile-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -135,8 +135,8 @@
             </p>
 
             <div class="hero-cta reveal reveal-d4">
-              <a href="#projects" class="btn btn-primary btn-lg">
-                View my work
+              <a href="#highlights" class="btn btn-primary btn-lg">
+                View highlights
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -219,38 +219,6 @@
           <div class="timeline-item reveal" role="listitem">
             <div class="timeline-marker" aria-hidden="true">
               <div class="timeline-dot timeline-dot--active"></div>
-              <div class="timeline-line"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-head">
-                <div class="timeline-head-left">
-                  <div class="timeline-logo" aria-hidden="true">
-                    <img src="assets/logos/yandex.svg" alt="">
-                  </div>
-                  <div>
-                    <h3 class="timeline-role">ML Engineer — Search Antispam</h3>
-                    <span class="timeline-company">Yandex</span>
-                  </div>
-                </div>
-                <div class="timeline-meta">
-                  <span class="timeline-period">April 2025 — Present</span>
-                  <span class="timeline-location">Moscow, Russia</span>
-                </div>
-              </div>
-              <p class="timeline-desc">
-                Working on antispam systems for Yandex Search. Building and maintaining ML models to detect and filter search spam at production scale.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">ML</span>
-                <span class="tech-badge">Search</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-d1" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="timeline-dot"></div>
               <div class="timeline-line timeline-line--last"></div>
             </div>
             <div class="timeline-content">
@@ -260,22 +228,22 @@
                     <img src="assets/logos/yandex.svg" alt="">
                   </div>
                   <div>
-                    <h3 class="timeline-role">ML Engineer — Search Antifraud</h3>
-                    <span class="timeline-company">Yandex</span>
+                    <h3 class="timeline-role">Analyst Developer — Search Antispam / Antifraud</h3>
+                    <span class="timeline-company">Yandex Search</span>
                   </div>
                 </div>
                 <div class="timeline-meta">
-                  <span class="timeline-period">Feb 2025 — April 2025</span>
+                  <span class="timeline-period">Feb 2025 — Present</span>
                   <span class="timeline-location">Moscow, Russia</span>
                 </div>
               </div>
               <p class="timeline-desc">
-                Worked on antifraud systems for Yandex Search, developing and improving ML models to detect fraudulent activity in search traffic.
+                Developing ML products end-to-end: training and integrating models for spam and harmful-content filtering, automating crowd-labeling workflows, and conducting technical interviews in analytics and Python.
               </p>
               <div class="tech-stack">
                 <span class="tech-badge">Python</span>
                 <span class="tech-badge">ML</span>
-                <span class="tech-badge">Antifraud</span>
+                <span class="tech-badge">Search</span>
               </div>
             </div>
           </div>
@@ -420,8 +388,167 @@
       </div>
     </section>
 
-    <!-- ───────── 3. PROJECTS ───────── -->
-    
+    <!-- ───────── 3. SELECTED HIGHLIGHTS ───────── -->
+    <section class="section highlights-section" id="highlights" aria-labelledby="highlights-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Achievements</span>
+          <h2 class="section-heading" id="highlights-heading">Beyond the role.</h2>
+          <p class="section-sub">Recognitions, open-source work, and research that add context beyond job titles and degrees.</p>
+        </div>
+
+        <div class="highlights-tabs reveal" role="tablist" aria-label="Achievement categories">
+          <button class="highlights-tab highlights-tab--active" type="button" role="tab" id="highlights-tab-recognition" aria-selected="true" aria-controls="highlights-panel-recognition" data-highlight-tab="recognition" tabindex="0">
+            Recognition
+          </button>
+          <button class="highlights-tab" type="button" role="tab" id="highlights-tab-open-source" aria-selected="false" aria-controls="highlights-panel-open-source" data-highlight-tab="open-source" tabindex="-1">
+            Open Source
+          </button>
+          <button class="highlights-tab" type="button" role="tab" id="highlights-tab-research" aria-selected="false" aria-controls="highlights-panel-research" data-highlight-tab="research" tabindex="-1">
+            Research
+          </button>
+        </div>
+
+        <div class="highlights-panels reveal">
+          <div class="highlights-panel" id="highlights-panel-recognition" role="tabpanel" aria-labelledby="highlights-tab-recognition" tabindex="0">
+            <div class="recognition-grid">
+              <article class="highlight-card highlight-card--olympiad">
+                <div class="highlight-card-topline">
+                  <div>
+                    <span class="highlight-eyebrow">National Olympiad · Chemistry</span>
+                    <span class="highlight-repo">Final stage · Year to be added</span>
+                  </div>
+                  <span class="highlight-status highlight-status--award">Prize winner</span>
+                </div>
+                <div class="highlight-card-body">
+                  <h3 class="highlight-title">All-Russian School Olympiad in Chemistry</h3>
+                  <p class="highlight-description">
+                    Prize winner at the final stage of Russia's national academic olympiad for school students.
+                  </p>
+                </div>
+              </article>
+
+              <article class="highlight-card highlight-card--kaggle">
+                <div class="highlight-card-topline">
+                  <div>
+                    <span class="highlight-eyebrow">Kaggle · Community Rank</span>
+                    <span class="highlight-repo">Public profile recognition</span>
+                  </div>
+                </div>
+                <div class="highlight-card-body">
+                  <h3 class="highlight-title">Notebooks Expert</h3>
+                  <p class="highlight-description">
+                    Recognized contributor in Kaggle's public notebook community, with published data-analysis work available on the profile.
+                  </p>
+                </div>
+                <div class="highlight-actions">
+                  <a class="highlight-link highlight-link--primary" href="https://www.kaggle.com/samoilovmikhail" target="_blank" rel="noopener noreferrer">View Kaggle profile</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="highlights-panel" id="highlights-panel-open-source" role="tabpanel" aria-labelledby="highlights-tab-open-source" tabindex="0" hidden>
+            <article class="contribution-board">
+              <div class="highlight-card-topline">
+                <div class="highlight-source">
+                  <div class="highlight-logo" aria-hidden="true">
+                    <img src="assets/badges/polars.svg" alt="">
+                  </div>
+                  <div>
+                    <span class="highlight-eyebrow">Upstream contributions</span>
+                    <span class="highlight-repo">Merged work and contribution queue</span>
+                  </div>
+                </div>
+                <span class="contribution-count">Growing contribution log</span>
+              </div>
+
+              <div class="contribution-list">
+                <div class="contribution-row">
+                  <div class="contribution-row-main">
+                    <div class="contribution-row-meta">pola-rs/polars · merged contribution</div>
+                    <h3 class="contribution-row-title">Serialize LazyFrames backed by bytes</h3>
+                    <p class="contribution-row-description">Rust-core serialization fix with Python regression coverage for serialization and pickle round-trips.</p>
+                  </div>
+                  <div class="contribution-row-side">
+                    <span class="highlight-status highlight-status--merged">Merged</span>
+                    <div class="contribution-row-links">
+                      <a href="https://github.com/pola-rs/polars/pull/28568" target="_blank" rel="noopener noreferrer">View contribution</a>
+                      <a href="https://github.com/pola-rs/polars/issues/21847" target="_blank" rel="noopener noreferrer">Related issue</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contribution-row contribution-row--planned">
+                  <div class="contribution-row-main">
+                    <div class="contribution-row-meta">pola-rs/polars · next contribution</div>
+                    <h3 class="contribution-row-title">Next Polars contribution</h3>
+                    <p class="contribution-row-description">Issue, scope, and pull request link will be added when the contribution is opened.</p>
+                  </div>
+                  <span class="highlight-status highlight-status--pending">Planned</span>
+                </div>
+
+                <div class="contribution-row contribution-row--planned">
+                  <div class="contribution-row-main">
+                    <div class="contribution-row-meta">new upstream repository · contribution slot</div>
+                    <h3 class="contribution-row-title">Upcoming open-source contribution</h3>
+                    <p class="contribution-row-description">Repository, issue, and pull request will appear here.</p>
+                  </div>
+                  <span class="highlight-status highlight-status--pending">Planned</span>
+                </div>
+
+                <div class="contribution-row contribution-row--planned">
+                  <div class="contribution-row-main">
+                    <div class="contribution-row-meta">new upstream repository · contribution slot</div>
+                    <h3 class="contribution-row-title">Upcoming open-source contribution</h3>
+                    <p class="contribution-row-description">Repository, issue, and pull request will appear here.</p>
+                  </div>
+                  <span class="highlight-status highlight-status--pending">Planned</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="highlights-panel" id="highlights-panel-research" role="tabpanel" aria-labelledby="highlights-tab-research" tabindex="0" hidden>
+            <article class="research-record">
+              <div class="research-record-intro">
+                <span class="highlight-eyebrow">Research notes &amp; publications</span>
+                <p>Selected work presented as supporting evidence, without turning the portfolio into a publication catalogue.</p>
+              </div>
+
+              <div class="research-list">
+                <section class="research-item" aria-labelledby="research-ugolki-title">
+                  <div class="research-item-copy">
+                    <div class="research-item-meta">Conference thesis · Awaiting publication · 2026</div>
+                    <h3 class="research-item-title" id="research-ugolki-title">How PER prioritization α affects a self-play DQN agent in Ugolki</h3>
+                    <p class="research-item-description">An ablation study of Prioritized Experience Replay in a reinforcement-learning agent trained through self-play.</p>
+                  </div>
+                  <a class="research-item-link" href="https://github.com/Samoilov2004/UgolkiEngine/blob/main/report/%D0%A1%D0%B0%D0%BC%D0%BE%D0%B9%D0%BB%D0%BE%D0%B2_%D1%82%D0%B5%D0%B7%D0%B8%D1%81%D1%8B.pdf" target="_blank" rel="noopener noreferrer">Read draft thesis</a>
+                </section>
+
+                <section class="research-item" aria-labelledby="research-oceanology-title">
+                  <div class="research-item-copy">
+                    <div class="research-item-meta">Oceanology · Publication series</div>
+                    <h3 class="research-item-title" id="research-oceanology-title">Data preparation for oceanological research</h3>
+                    <p class="research-item-description">Contributed data cleaning, preprocessing, quality control, and preparation of observational datasets for analysis.</p>
+                    <div class="publication-links" aria-label="Oceanology publications on eLibrary">
+                      <a href="https://elibrary.ru/item.asp?id=70654130" target="_blank" rel="noopener noreferrer">eLibrary 70654130</a>
+                      <a href="https://elibrary.ru/item.asp?id=70654145" target="_blank" rel="noopener noreferrer">eLibrary 70654145</a>
+                      <a href="https://elibrary.ru/item.asp?id=71256561" target="_blank" rel="noopener noreferrer">eLibrary 71256561</a>
+                      <a href="https://elibrary.ru/item.asp?id=54886825" target="_blank" rel="noopener noreferrer">eLibrary 54886825</a>
+                      <a href="https://elibrary.ru/item.asp?id=54886862" target="_blank" rel="noopener noreferrer">eLibrary 54886862</a>
+                      <a href="https://elibrary.ru/item.asp?id=54977545" target="_blank" rel="noopener noreferrer">eLibrary 54977545</a>
+                      <a href="https://elibrary.ru/item.asp?id=54886911" target="_blank" rel="noopener noreferrer">eLibrary 54886911</a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ───────── 4. SKILLS ───────── -->
     <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
   <div class="container">
@@ -585,6 +712,11 @@
             <span class="skill-name">Datalens</span>
           </div>
 
+          <div class="skill-card" role="listitem" title="Selenium">
+            <img src="assets/badges/selenium.svg" class="skill-icon" alt="Selenium" loading="lazy">
+            <span class="skill-name">Selenium</span>
+          </div>
+
         </div>
       </div>
 
@@ -676,7 +808,7 @@
         <div class="section-header reveal">
           <span class="section-tag">Get in Touch</span>
           <h2 class="section-heading" id="contact-heading">Let's build something<br>worth building.</h2>
-          <p class="section-sub">Open to research collaborations, interesting projects, and conversations about ML systems. If you're working on a hard problem, I'd love to hear about it.</p>
+          <p class="section-sub">Open to research collaborations, open-source contributions, and conversations about ML systems. If you're working on a hard problem, I'd love to hear about it.</p>
         </div>
 
         <div class="contact-grid reveal">
@@ -750,14 +882,16 @@
         <nav class="footer-nav" aria-label="Footer navigation">
           <div class="footer-nav-col">
             <span class="footer-nav-heading">Pages</span>
-            <a href="#projects" class="footer-nav-link">Work</a>
-            <a href="#skills" class="footer-nav-link">Skills</a>
             <a href="#experience" class="footer-nav-link">Experience</a>
+            <a href="#highlights" class="footer-nav-link">Highlights</a>
+            <a href="#skills" class="footer-nav-link">Skills</a>
             <a href="#contact" class="footer-nav-link">Contact</a>
           </div>
           <div class="footer-nav-col">
-            <span class="footer-nav-heading">Projects</span>
-            <a href="#" class="footer-nav-link">Dont foget to add my project names</a>
+            <span class="footer-nav-heading">Highlights</span>
+            <a href="#highlights" class="footer-nav-link" data-highlight-target="recognition">Recognition</a>
+            <a href="#highlights" class="footer-nav-link" data-highlight-target="open-source">Open Source</a>
+            <a href="#highlights" class="footer-nav-link" data-highlight-target="research">Research</a>
           </div>
           <div class="footer-nav-col">
             <span class="footer-nav-heading">Connect</span>

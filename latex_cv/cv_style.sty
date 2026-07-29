@@ -1,0 +1,79 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cv_style}[2026/07/29 ATS-friendly resume style]
+
+\RequirePackage[a4paper,top=1.25cm,bottom=1.25cm,left=1.45cm,right=1.45cm]{geometry}
+\RequirePackage{fontspec}
+\RequirePackage{enumitem}
+\RequirePackage{xcolor}
+\RequirePackage{titlesec}
+\RequirePackage{hyperref}
+\RequirePackage{microtype}
+
+\setmainfont{Arial}
+\setsansfont{Arial}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvtext}{HTML}{191919}
+\definecolor{cvmuted}{HTML}{555555}
+\definecolor{cvaccent}{HTML}{155E75}
+\definecolor{cvrule}{HTML}{C9D4D8}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=cvaccent,
+  linkcolor=cvaccent,
+  pdfborder={0 0 0}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\color{cvtext}
+\emergencystretch=1.5em
+
+\titleformat{\section}
+  {\fontsize{10.5}{12.5}\selectfont\bfseries\color{cvtext}}
+  {}{0pt}{}
+  [\vspace{2pt}\color{cvrule}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=1.2pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textcolor{cvaccent}{\small\textbullet}
+}
+
+\newcommand{\cvname}[1]{
+  {\fontsize{21}{23}\selectfont\bfseries #1}\par
+}
+
+\newcommand{\cvheadline}[1]{
+  \vspace{1pt}{\fontsize{10.5}{12.5}\selectfont\bfseries\color{cvaccent} #1}\par
+}
+
+\newcommand{\cvcontact}[1]{
+  \vspace{4pt}{\fontsize{8.5}{10.5}\selectfont\color{cvmuted} #1}\par
+}
+
+\newcommand{\cvsummary}[1]{
+  \vspace{5pt}{\fontsize{9.2}{11.5}\selectfont #1}\par
+}
+
+\newcommand{\cventry}[4]{
+  \textbf{#1}\hfill{\fontsize{8.7}{10.5}\selectfont\color{cvmuted} #2}\par
+  {\fontsize{9}{11}\selectfont\color{cvaccent}\textbf{#3}}\hfill{\fontsize{8.7}{10.5}\selectfont\color{cvmuted} #4}\par
+}
+
+\newcommand{\cveducation}[3]{
+  \textbf{#1}\hfill{\fontsize{8.7}{10.5}\selectfont\color{cvmuted} #2}\par
+  {\fontsize{9}{11}\selectfont\color{cvaccent} #3}\par
+}
+
+\newcommand{\cvcompactline}[2]{
+  \textbf{#1} #2\par
+}
+
+\newcommand{\cvsmall}{\fontsize{9}{11}\selectfont}

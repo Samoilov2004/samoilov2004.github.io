@@ -1,0 +1,70 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{cv_style}
+
+\hypersetup{
+  pdftitle={Михаил Самойлов - Аналитик-разработчик},
+  pdfauthor={Михаил Самойлов},
+  pdfsubject={Резюме}
+}
+
+\begin{document}
+
+\cvname{Михаил Самойлов}
+\cvheadline{Аналитик-разработчик | Machine Learning}
+\cvcontact{
+  Москва, Россия \enspace|\enspace
+  \href{mailto:kryiska9@gmail.com}{kryiska9@gmail.com} \enspace|\enspace
+  \href{https://t.me/samoilov_ma}{t.me/samoilov\_ma} \enspace|\enspace
+  \href{https://github.com/Samoilov2004}{GitHub} \enspace|\enspace
+  \href{https://www.linkedin.com/in/samoilov-mikhail-a10559425}{LinkedIn}
+}
+\cvsummary{Аналитик-разработчик в группе антиспама и антифрода Поиска Яндекса. Разрабатываю ML-продукты от постановки задачи и экспериментов до встраивания моделей в production-процессы. Активный технический собеседующий секций аналитики и Python.}
+
+\section{Опыт работы}
+
+\cventry{Аналитик-разработчик - Антиспам и антифрод Поиска}{февр. 2025 - настоящее время}{Яндекс}{Москва}
+\begin{itemize}
+  \item Обучаю и внедряю ML-модели для фильтрации спама, вредоносного контента и фрода.
+  \item Разрабатываю ML-продукты от постановки задачи и экспериментов до внедрения в production-процессы.
+  \item Автоматизировал крауд-разметки и существенно снизил расходы группы (точная величина находится под NDA).
+  \item Провёл 30+ технических интервью по аналитике и Python. Составляю и модерирую задачи.
+\end{itemize}
+
+\section{Образование}
+
+\cveducation{Магистратура, Computer Science}{2026 - 2028}{НИУ ВШЭ, Москва (поступление запланировано)}
+\vspace{2pt}
+\cveducation{Бакалавриат, Computer Science}{2024 - 2026}{Российский биотехнологический университет (РОСБИОТЕХ), Москва}
+\begin{itemize}
+  \item Руководитель команды бакалаврской ВКР в формате стартапа: распределяю роли и координирую работу участников.
+\end{itemize}
+\vspace{2pt}
+\cveducation{Обучение по направлению «Биофизика»}{2022 - 2024}{Московский физико-технический институт (МФТИ), Москва}
+
+\section{Технические навыки}
+
+{\cvsmall
+\cvcompactline{Языки программирования:}{Python, SQL, C++, Rust, R, Bash}
+\cvcompactline{Machine Learning и данные:}{PyTorch, scikit-learn, CatBoost, NumPy, Pandas, Polars, SciPy, Statsmodels}
+\cvcompactline{Data Engineering и инфраструктура:}{Spark, Kafka, Airflow, Docker, PostgreSQL, ClickHouse, Redis, Elasticsearch, Git}
+}
+
+\section{Достижения и Open Source}
+
+\begin{itemize}
+  \item \textbf{Призёр заключительного этапа Всероссийской олимпиады школьников по химии.}
+  \item \textbf{Победитель внутреннего хакатона Яндекса} по направлению независимого e-commerce.
+  \item \textbf{Финалист хакатона по обработке биологических данных.}
+  \item \textbf{Kaggle Notebooks Expert}: \href{https://www.kaggle.com/samoilovmikhail}{публичные работы по анализу данных} и вклад в сообщество платформы.
+  \item \textbf{Удостоверение о повышении квалификации в области морских исследований.}
+  \item \textbf{Контрибьютор Polars:} \href{https://github.com/pola-rs/polars/pull/28568}{влитый вклад в upstream} с исправлением сериализации byte-backed LazyFrame в Rust-ядре и регрессионными тестами на Python.
+\end{itemize}
+
+\section{Исследовательская работа}
+
+\begin{itemize}
+  \item Подготовил тезисы 2026 года о влиянии параметра $\alpha$ Prioritized Experience Replay на self-play DQN-агента в игре «Уголки». \href{https://github.com/Samoilov2004/UgolkiEngine/blob/main/report/%D0%A1%D0%B0%D0%BC%D0%BE%D0%B9%D0%BB%D0%BE%D0%B2_%D1%82%D0%B5%D0%B7%D0%B8%D1%81%D1%8B.pdf}{Рукопись ожидает публикации}.
+  \item Участвовал в подготовке семи публикаций по океанологии: очистка и предобработка данных, контроль качества и подготовка наблюдений к анализу.
+\end{itemize}
+
+\end{document}
