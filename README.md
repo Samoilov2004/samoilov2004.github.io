@@ -1,39 +1,18 @@
 # samoilov2004.github.io
 
-Personal portfolio hosted on GitHub Pages.
+Static one-page personal site for GitHub Pages. The current version uses a warm paper surface, handwritten typography, a high-resolution restoration of the selected cat/window scene, and a compact editorial layout.
 
-## Updating content without editing HTML
+## Structure
 
-- Open-source pull requests live in `data/open-source.js`.
-- Skill badges live in `data/skills.js`.
+- `index.html` — semantic one-page content and anchor navigation
+- `css/site.css` — paper visual system and responsive desktop/tablet/mobile layout
+- `js/site.js` — section reveals and active navigation state
+- `assets/illustrations/` — the 4K cat scene plus transparent supporting drawings
+- `assets/fonts/` — self-hosted Kalam and Patrick Hand
+- `assets/icons/` — Iconoir interface symbols and official profile marks
+- `assets/badges/` and `assets/logos/` — technology and education marks
+- `design/` — final browser captures and reference comparison boards
+- `legacy/minimal-dark-2026-08-23/` — the previous minimal dark version, preserved intact
+- `legacy/cat-window-looking-at-camera-2026-08-23/` — the previous cat/window hero pose in original and 4K formats
 
-Add, remove, or reorder data objects and the page will update automatically.
-Keep the commas between objects and use quotes around text.
-
-Open-source pull requests are grouped by project:
-
-```js
-{
-  project: "Project name",
-  repository: "owner/repository",
-  contributions: [
-    {
-      number: 123,
-      title: "Short pull request title",
-      status: "open",
-      url: "https://github.com/owner/repository/pull/123"
-    }
-  ]
-}
-```
-
-Supported statuses are `open`, `merged`, `closed`, and `draft`.
-
-A skill badge has this shape inside a category's `items` list:
-
-```js
-{ name: "Tool name", icon: "assets/badges/tool.svg" }
-```
-
-Use `iconText` instead of `icon` when there is no image available. The data
-files work both on GitHub Pages and when `index.html` is opened directly.
+There is no framework, package manager, build step, or runtime dependency. Open `index.html` directly or serve the repository root with any static file server.

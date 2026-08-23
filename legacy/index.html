@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mikhail Samoilov — data scientist and ML engineer. Search systems, open source, and applied research.">
+  <meta name="theme-color" content="#0b0c0b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mikhail Samoilov — DS / ML Engineer">
+  <meta property="og:description" content="Search systems, open source, and applied machine learning.">
+  <title>mikhail@samoilov:~</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/prototype.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">skip to output</a>
+
+  <header class="tty-bar" aria-label="Site navigation">
+    <div class="tty-bar__inner">
+      <a class="tty-title" href="#top"><span>mikhail@samoilov</span>:~</a>
+      <nav class="tty-nav" aria-label="Page sections">
+        <a href="#about">./about</a>
+        <a href="#work">./work</a>
+        <a href="#stack">./stack</a>
+        <a href="#notes">./notes</a>
+        <a href="#contact">./contact</a>
+      </nav>
+      <span class="tty-id" aria-hidden="true">tty1</span>
+    </div>
+  </header>
+
+  <main class="terminal" id="content">
+    <section class="session intro" id="top" aria-labelledby="intro-command">
+      <p class="prompt-line" id="intro-command"><span class="user">mikhail@samoilov</span><span class="punctuation">:</span><span class="path">~</span><span class="punctuation">$</span> <span>whoami</span></p>
+      <div class="output intro-output" id="about">
+        <p class="boot-line"><span class="ok">[ OK ]</span> profile loaded</p>
+        <h1>Mikhail Samoilov</h1>
+        <p class="role">DS / ML Engineer <span class="comment"># Yandex Search / Antispam</span></p>
+        <p class="summary">I build production ML systems, contribute upstream,<br class="desktop-only"> and study the places where research meets real infrastructure.</p>
+        <dl class="facts" aria-label="Profile facts">
+          <div><dt>status</dt><dd>working at Yandex Search</dd></div>
+          <div><dt>education</dt><dd>Computer Science @ HSE</dd></div>
+          <div><dt>background</dt><dd>Biophysics @ MIPT</dd></div>
+          <div><dt>location</dt><dd>Moscow, Russia</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="session" id="work" aria-labelledby="work-command">
+      <p class="prompt-line" id="work-command"><span class="user">mikhail@samoilov</span><span class="punctuation">:</span><span class="path">~/work</span><span class="punctuation">$</span> <span>ls -lt --selected</span></p>
+      <div class="output">
+        <p class="total">total 5</p>
+        <div class="file-list" role="list">
+          <a class="file-row" role="listitem" href="https://github.com/pola-rs/polars/pull/28568" target="_blank" rel="noreferrer">
+            <span class="permissions">-rw-r--r--</span>
+            <span class="year">2026</span>
+            <span class="filename">polars_lazyframe_serialization</span>
+            <span class="description">merged upstream contribution</span>
+            <span class="external" aria-hidden="true">↗</span>
+          </a>
+          <a class="file-row" role="listitem" href="https://github.com/pola-rs/polars/pull/28616" target="_blank" rel="noreferrer">
+            <span class="permissions">-rw-r--r--</span>
+            <span class="year">2026</span>
+            <span class="filename">polars_parallel_execution</span>
+            <span class="description">query engine performance work</span>
+            <span class="external" aria-hidden="true">↗</span>
+          </a>
+          <a class="file-row" role="listitem" href="https://github.com/pytorch/pytorch/pull/192666" target="_blank" rel="noreferrer">
+            <span class="permissions">-rw-r--r--</span>
+            <span class="year">2026</span>
+            <span class="filename">pytorch_error_messages</span>
+            <span class="description">developer experience patch</span>
+            <span class="external" aria-hidden="true">↗</span>
+          </a>
+          <a class="file-row" role="listitem" href="https://github.com/Samoilov2004/UgolkiEngine/blob/main/report/%D0%A1%D0%B0%D0%BC%D0%BE%D0%B9%D0%BB%D0%BE%D0%B2_%D1%82%D0%B5%D0%B7%D0%B8%D1%81%D1%8B.pdf" target="_blank" rel="noreferrer">
+            <span class="permissions">-rw-r--r--</span>
+            <span class="year">2026</span>
+            <span class="filename">ugolki_self_play_dqn.pdf</span>
+            <span class="description">reinforcement learning study</span>
+            <span class="external" aria-hidden="true">↗</span>
+          </a>
+          <div class="file-row" role="listitem">
+            <span class="permissions">drwxr-xr-x</span>
+            <span class="year">2025—</span>
+            <span class="filename directory">yandex_search_antispam/</span>
+            <span class="description">production ML systems</span>
+            <span class="external" aria-hidden="true">·</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="session" id="stack" aria-labelledby="stack-command">
+      <p class="prompt-line" id="stack-command"><span class="user">mikhail@samoilov</span><span class="punctuation">:</span><span class="path">~</span><span class="punctuation">$</span> <span>tree ~/stack -L 2</span></p>
+      <div class="output stack-output">
+        <p class="directory">/home/mikhail/stack</p>
+        <div class="stack-tree" role="list" aria-label="Selected technologies">
+          <div class="stack-branch" role="listitem">
+            <span class="tree-mark">├──</span><span class="directory">ml</span>
+            <div class="stack-items">
+              <span class="tech"><span class="text-icon">py</span>Python</span>
+              <span class="tech"><span class="text-icon">pt</span>PyTorch</span>
+              <span class="tech"><img src="assets/badges/catboost.svg" alt="">CatBoost</span>
+              <span class="tech"><img src="assets/badges/hf.svg" alt="">Transformers</span>
+            </div>
+          </div>
+          <div class="stack-branch" role="listitem">
+            <span class="tree-mark">├──</span><span class="directory">data</span>
+            <div class="stack-items">
+              <span class="tech"><img src="assets/badges/sql.svg" alt="">SQL</span>
+              <span class="tech"><img src="assets/badges/clickhouse.svg" alt="">ClickHouse</span>
+              <span class="tech"><img src="assets/badges/polars.svg" alt="">Polars</span>
+              <span class="tech"><img src="assets/badges/kafka.svg" alt="">Kafka</span>
+            </div>
+          </div>
+          <div class="stack-branch" role="listitem">
+            <span class="tree-mark">└──</span><span class="directory">systems</span>
+            <div class="stack-items">
+              <span class="tech"><img src="assets/badges/apache-airflow.svg" alt="">Airflow</span>
+              <span class="tech"><img src="assets/badges/redis.svg" alt="">Redis</span>
+              <span class="tech"><span class="text-icon">sh</span>Bash</span>
+              <span class="tech"><span class="text-icon">git</span>Git</span>
+            </div>
+          </div>
+        </div>
+        <p class="tree-summary">3 directories, 12 tools</p>
+        <p class="hint"><span class="comment"># icons stay monochrome; hover to reveal their native color</span></p>
+      </div>
+    </section>
+
+    <section class="session" id="numbers" aria-labelledby="numbers-command">
+      <p class="prompt-line" id="numbers-command"><span class="user">mikhail@samoilov</span><span class="punctuation">:</span><span class="path">~</span><span class="punctuation">$</span> <span>cat metrics.log</span></p>
+      <div class="output metrics" role="list">
+        <p role="listitem"><span class="metric-value">04</span><span class="metric-key">upstream_prs</span><span class="comment"># Polars + PyTorch</span></p>
+        <p role="listitem"><span class="metric-value">02</span><span class="metric-key">open_source_codebases</span></p>
+        <p role="listitem"><span class="metric-value">07</span><span class="metric-key">oceanology_publication_records</span></p>
+        <p role="listitem"><span class="metric-value">01</span><span class="metric-key">national_olympiad_prize</span></p>
+      </div>
+    </section>
+
+    <section class="session" id="notes" aria-labelledby="notes-command">
+      <p class="prompt-line" id="notes-command"><span class="user">mikhail@samoilov</span><span class="punctuation">:</span><span class="path">~/notes</span><span class="punctuation">$</span> <span>cat README.txt</span></p>
+      <div class="output notes-output">
+        <p><span class="line-no">01</span>I started in biophysics. The habit of asking whether a model corresponds to something real never left.</p>
+        <p><span class="line-no">02</span>I like performance work, reinforcement learning, and systems where mathematics survives contact with production.</p>
+        <p><span class="line-no">03</span>Away from the main job, I send small patches upstream and keep notes for my future self.</p>
+      </div>
+    </section>
+
+    <section class="session" id="contact" aria-labelledby="contact-command">
+      <p class="prompt-line" id="contact-command"><span class="user">mikhail@samoilov</span><span class="punctuation">:</span><span class="path">~</span><span class="punctuation">$</span> <span>cat .links</span></p>
+      <div class="output links-output">
+        <a href="https://github.com/Samoilov2004" target="_blank" rel="noreferrer"><span class="link-key">GITHUB=</span><span class="string">"github.com/Samoilov2004"</span><span aria-hidden="true"> ↗</span></a>
+        <a href="https://t.me/samoilov_ma" target="_blank" rel="noreferrer"><span class="link-key">TELEGRAM=</span><span class="string">"t.me/samoilov_ma"</span><span aria-hidden="true"> ↗</span></a>
+        <a href="https://www.linkedin.com/in/samoilov-mikhail-a10559425" target="_blank" rel="noreferrer"><span class="link-key">LINKEDIN=</span><span class="string">"in/samoilov-mikhail"</span><span aria-hidden="true"> ↗</span></a>
+        <a href="https://www.kaggle.com/samoilovmikhail" target="_blank" rel="noreferrer"><span class="link-key">KAGGLE=</span><span class="string">"kaggle.com/samoilovmikhail"</span><span aria-hidden="true"> ↗</span></a>
+        <a href="mailto:kryiska9@gmail.com"><span class="link-key">EMAIL=</span><span class="string">"kryiska9@gmail.com"</span><span aria-hidden="true"> ↗</span></a>
+      </div>
+    </section>
+
+    <footer class="session footer-session">
+      <p class="logout">Last login: today on tty1</p>
+      <p class="prompt-line"><span class="user">guest@samoilov</span><span class="punctuation">:</span><span class="path">~</span><span class="punctuation">$</span> <span class="cursor" aria-hidden="true"></span></p>
+    </footer>
+  </main>
+</body>
+</html>

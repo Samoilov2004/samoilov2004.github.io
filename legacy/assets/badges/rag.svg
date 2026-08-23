@@ -1,0 +1,40 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Database icon -->
+  <ellipse cx="120" cy="160" rx="45" ry="15"
+           stroke="#6366F1"
+           stroke-width="8"/>
+  <path d="M75 160V220C75 230 95 238 120 238C145 238 165 230 165 220V160"
+        stroke="#6366F1"
+        stroke-width="8"
+        fill="none"/>
+  <path d="M75 190C75 200 95 208 120 208C145 208 165 200 165 190"
+        stroke="#6366F1"
+        stroke-width="8"/>
+
+  <!-- Document icon -->
+  <path d="M392 150H330C320 150 312 158 312 168V230C312 240 320 248 330 248H392C402 248 410 240 410 230V168C410 158 402 150 392 150Z"
+        stroke="#6366F1"
+        stroke-width="8"/>
+  <path d="M345 180H380M345 205H380M345 230H365"
+        stroke="#6366F1"
+        stroke-width="8"
+        stroke-linecap="round"/>
+
+  <!-- Arrow marker -->
+<path d="M165 130 C215 55 295 55 345 130"
+      stroke="#8B5CF6"
+      stroke-width="8"
+      stroke-linecap="round"
+      fill="none"/>
+
+<!-- Bottom arrow -->
+<path d="M345 260 C295 335 215 335 165 260"
+      stroke="#8B5CF6"
+      stroke-width="8"
+      stroke-linecap="round"
+      fill="none"/>
+
+</svg>
+
+<!-- Retrieval arrows -->

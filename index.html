@@ -1,642 +1,207 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Machine Learning Engineer — building production AI systems, neural architectures, and research tooling.">
-  <meta name="keywords" content="machine learning engineer, AI, deep learning, MLOps, PyTorch, portfolio, CV">
-  <meta name="author" content="Samoilov Mikhail">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0c0b09">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mikhail Samoilov — ML engineer at Yandex Search. Education, production machine learning, open source, and selected technologies.">
+  <meta name="theme-color" content="#f4ecdf">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Samoilov Mikhail — DS / ML Engineer">
-  <meta property="og:description" content="Building production AI systems from research to deployment.">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Samoilov Mikhail — DS / ML Engineer">
-  <meta name="twitter:description" content="Building production AI systems from research to deployment.">
-
-  <title>Samoilov Mikhail — DS / ML Engineer</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <meta property="og:title" content="Mikhail Samoilov — ML Engineer">
+  <meta property="og:description" content="A personal page about production ML, education, open source, and technology.">
+  <title>Mikhail Samoilov — ML Engineer</title>
+  <link rel="preload" href="assets/fonts/Kalam-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/PatrickHand-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- Scroll Progress -->
-  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
-  <header class="nav" id="nav" role="banner">
-    <div class="nav-inner container">
-
-      <a href="#" class="nav-logo" aria-label="Samoilov Mikhail — back to top">
-        <span class="nav-logo-mark" aria-hidden="true">MS</span>
-        <span class="nav-logo-name">Mikhail Samoilov</span>
-      </a>
-
-      <nav aria-label="Primary navigation">
-        <ul class="nav-links" role="list">
-          <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
-          <li><a href="#highlights" class="nav-link" data-section="highlights">Highlights</a></li>
-          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-        </ul>
+  <header class="site-header" aria-label="Site header">
+    <div class="site-header__inner">
+      <a class="site-name" href="#top" aria-label="Back to top">Mikhail Samoilov</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#work">Work</a><span aria-hidden="true">/</span>
+        <a href="#education">Education</a><span aria-hidden="true">/</span>
+        <a href="#open-source">Open Source</a><span aria-hidden="true">/</span>
+        <a href="#tech">Technologies</a><span aria-hidden="true">/</span>
+        <a href="#contacts">Contacts</a>
       </nav>
-
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
-          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-          </svg>
-          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-        </button>
-
-        <div class="resume-group" role="group" aria-label="Download resume">
-          <a href="latex_cv/Mikhail_Samoilov_CV_EN.pdf" class="btn-resume" aria-label="Download English resume" download>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            CV EN
-          </a>
-          <a href="latex_cv/Mikhail_Samoilov_CV_RU.pdf" class="btn-resume" aria-label="Download Russian resume" download>CV RU</a>
-        </div>
-
-        <button class="nav-hamburger" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMobile">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <!-- Mobile Nav Overlay -->
-  <div class="nav-mobile" id="navMobile" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <button class="nav-mobile-close" id="navMobileClose" aria-label="Close navigation menu">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
-    <nav aria-label="Mobile navigation">
-      <ul class="nav-mobile-links" role="list">
-        <li><a href="#experience" class="nav-mobile-link">Experience</a></li>
-        <li><a href="#highlights" class="nav-mobile-link">Highlights</a></li>
-        <li><a href="#skills" class="nav-mobile-link">Skills</a></li>
-        <li><a href="#contact" class="nav-mobile-link">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="resume-group" role="group" aria-label="Download resume" style="width:100%;justify-content:center">
-      <a href="latex_cv/Mikhail_Samoilov_CV_EN.pdf" class="btn-resume" aria-label="Download English resume" style="flex:1;justify-content:center" download>CV EN</a>
-      <a href="latex_cv/Mikhail_Samoilov_CV_RU.pdf" class="btn-resume" aria-label="Download Russian resume" style="flex:1;justify-content:center" download>CV RU</a>
+  <main id="main-content" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero-copy" data-reveal>
+          <h1 id="hero-title">Mikhail Samoilov</h1>
+          <p class="hero-role">Data Science & ML Engineering</p>
+          <p class="hero-company">Yandex Search / Trust & Safety</p>
+          <p class="hero-location"><span class="ui-icon ui-icon--pin" aria-hidden="true"></span>Moscow</p>
+
+          <nav class="hero-contacts" aria-label="Quick contact links">
+            <a href="https://github.com/Samoilov2004" target="_blank" rel="me noreferrer"><span class="contact-mark contact-mark--github" aria-hidden="true"></span><span>GitHub</span></a>
+            <a href="https://t.me/samoilov_ma" target="_blank" rel="me noreferrer"><span class="contact-mark contact-mark--telegram" aria-hidden="true"></span><span>Telegram</span></a>
+            <a href="https://www.linkedin.com/in/samoilov-mikhail-a10559425" target="_blank" rel="me noreferrer"><span class="contact-mark contact-mark--linkedin" aria-hidden="true"></span><span>LinkedIn</span></a>
+          </nav>
+        </div>
+
+        <div class="hero-art" data-reveal>
+          <picture>
+            <source srcset="assets/illustrations/cat-window-sleeping-v2.webp" type="image/webp">
+            <img src="assets/illustrations/cat-window-sleeping-v2.png" width="2658" height="2364" alt="A pale sphynx cat sleeping on a windowsill in front of a dark blue night city">
+          </picture>
+          <picture class="cat-note" aria-hidden="true">
+            <source srcset="assets/illustrations/cat-note.webp" type="image/webp">
+            <img src="assets/illustrations/cat-note.png" width="145" height="185" alt="">
+          </picture>
+        </div>
+
+        <a class="scroll-cue" href="#work" aria-label="Scroll to work"><span class="ui-icon ui-icon--down" aria-hidden="true"></span></a>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <section class="page-section work" id="work" aria-labelledby="work-title" data-reveal>
+        <header class="section-heading"><span class="ui-icon ui-icon--asterisk" aria-hidden="true"></span><h2 id="work-title">Work</h2></header>
+        <div class="work-grid">
+          <div class="work-summary">
+            <div class="yandex-mark" aria-hidden="true"><img src="assets/logos/yandex.svg" width="50" height="50" alt=""></div>
+            <div class="work-summary__main">
+              <h3>Data Scientist</h3>
+              <p>Yandex Search / Antispam &amp;</p>
+              <dl class="work-meta">
+                <div><dt><span class="ui-icon ui-icon--calendar" aria-hidden="true"></span><span class="sr-only">Dates</span></dt><dd>Feb 2025 — present</dd></div>
+                <div><dt><span class="ui-icon ui-icon--pin" aria-hidden="true"></span><span class="sr-only">Location</span></dt><dd>Moscow</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="work-details">
+            <p>Working on search antispam systems across the ML product lifecycle — from problem framing and experimentation to production integration.</p>
+            <ul>
+              <li>Train and integrate models for spam, harmful content, and fraudulent activity.</li>
+              <li>Automate crowdsourced labeling workflows and reduce labeling costs.</li>
+              <li>Conduct technical interviews for analytics and Python roles.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section education" id="education" aria-labelledby="education-title" data-reveal>
+        <header class="section-heading"><span class="ui-icon ui-icon--asterisk" aria-hidden="true"></span><h2 id="education-title">Education</h2></header>
+        <div class="education-layout">
+          <ol class="education-timeline">
+            <li><img src="assets/logos/mipt.svg" width="46" height="54" alt="MIPT logo"><div><p class="education-date">2022 — 2024</p><h3>MIPT, Biophysics</h3><p>Undergraduate studies</p></div></li>
+            <li><img src="assets/logos/rosbiotech.svg" width="50" height="50" alt="ROSBIOTECH logo"><div><p class="education-date">2024 — 2026</p><h3>ROSBIOTECH, Computer Science</h3><p>Bachelor's degree</p></div></li>
+            <li><img class="education-logo--mephi" src="assets/logos/mephi.svg" width="110" height="72" alt="MEPhI logo"><div><p class="education-date">2026 — 2028</p><h3>MEPhI, Computer Science</h3><p>Machine Learning track</p></div></li>
+          </ol>
+          <img class="books-illustration" src="assets/illustrations/books-coffee-transparent.png" width="640" height="592" alt="" loading="lazy">
+        </div>
+      </section>
+
+      <section class="page-section open-source" id="open-source" aria-labelledby="opensource-title" data-reveal>
+        <header class="section-heading"><span class="ui-icon ui-icon--asterisk" aria-hidden="true"></span><h2 id="opensource-title">Open Source</h2></header>
+        <div class="opensource-row">
+          <div class="opensource-copy"><span class="ui-icon ui-icon--heart" aria-hidden="true"></span><p>Open-source work<br>across Polars and PyTorch.</p></div>
+          <a class="github-link" href="https://github.com/Samoilov2004" target="_blank" rel="me noreferrer"><span class="contact-mark contact-mark--github contact-mark--small" aria-hidden="true"></span><span>github.com/Samoilov2004</span></a>
+        </div>
+      </section>
+
+      <section class="page-section technologies" id="tech" aria-labelledby="tech-title" data-reveal>
+        <header class="section-heading"><span class="ui-icon ui-icon--asterisk" aria-hidden="true"></span><h2 id="tech-title">Technologies</h2></header>
+        <div class="tech-categories">
+          <section class="tech-category" aria-labelledby="tech-ml">
+            <h3 id="tech-ml">Machine Learning &amp; AI</h3>
+            <ul class="tech-badges">
+              <li><img src="assets/badges/pytorch.svg" alt="" width="34" height="34"><span>PyTorch</span></li>
+              <li><img src="assets/badges/lightning.svg" alt="" width="34" height="34"><span>Lightning</span></li>
+              <li><img src="assets/badges/scikit-learn.svg" alt="" width="34" height="34"><span>scikit-learn</span></li>
+              <li><img src="assets/badges/catboost.svg" alt="" width="34" height="34"><span>CatBoost</span></li>
+              <li><img src="assets/badges/optuna.svg" alt="" width="34" height="34"><span>Optuna</span></li>
+              <li><img src="assets/badges/hf.svg" alt="" width="34" height="34"><span>Hugging Face</span></li>
+            </ul>
+          </section>
+
+          <section class="tech-category" aria-labelledby="tech-llm">
+            <h3 id="tech-llm">LLMs &amp; Generative AI</h3>
+            <ul class="tech-badges">
+              <li><img src="assets/badges/claude.svg" alt="" width="34" height="34"><span>Claude</span></li>
+              <li><img src="assets/badges/codex.svg" alt="" width="34" height="34"><span>Codex</span></li>
+              <li><img src="assets/badges/langchain.svg" alt="" width="34" height="34"><span>LangChain</span></li>
+              <li><img src="assets/badges/transformer.svg" alt="" width="34" height="34"><span>Transformers</span></li>
+              <li><img src="assets/badges/rag.svg" alt="" width="34" height="34"><span>RAG</span></li>
+              <li><img src="assets/badges/hf.svg" alt="" width="34" height="34"><span>Hugging Face</span></li>
+            </ul>
+          </section>
+
+          <section class="tech-category" aria-labelledby="tech-data-science">
+            <h3 id="tech-data-science">Data Science</h3>
+            <ul class="tech-badges">
+              <li><img src="assets/badges/numpy.svg" alt="" width="34" height="34"><span>NumPy</span></li>
+              <li><img src="assets/badges/pandas.svg" alt="" width="34" height="34"><span>Pandas</span></li>
+              <li><img src="assets/badges/polars.svg" alt="" width="34" height="34"><span>Polars</span></li>
+              <li><img src="assets/badges/scipy.svg" alt="" width="34" height="34"><span>SciPy</span></li>
+              <li><img src="assets/badges/statsmodels.svg" alt="" width="34" height="34"><span>Statsmodels</span></li>
+              <li><img src="assets/badges/plotly.svg" alt="" width="34" height="34"><span>Plotly</span></li>
+            </ul>
+          </section>
+
+          <section class="tech-category" aria-labelledby="tech-engineering">
+            <h3 id="tech-engineering">Data Engineering</h3>
+            <ul class="tech-badges">
+              <li><img src="assets/badges/spark.svg" alt="" width="34" height="34"><span>Spark</span></li>
+              <li><img src="assets/badges/kafka.svg" alt="" width="34" height="34"><span>Kafka</span></li>
+              <li><img src="assets/badges/apache-airflow.svg" alt="" width="34" height="34"><span>Airflow</span></li>
+              <li><img src="assets/badges/tableau.svg" alt="" width="34" height="34"><span>Tableau</span></li>
+              <li><img src="assets/badges/datalens.svg" alt="" width="34" height="34"><span>DataLens</span></li>
+              <li><img src="assets/badges/selenium.svg" alt="" width="34" height="34"><span>Selenium</span></li>
+            </ul>
+          </section>
+
+          <section class="tech-category" aria-labelledby="tech-infra">
+            <h3 id="tech-infra">Infrastructure</h3>
+            <ul class="tech-badges">
+              <li><img src="assets/badges/git.svg" alt="" width="34" height="34"><span>Git</span></li>
+              <li><img src="assets/badges/docker.svg" alt="" width="34" height="34"><span>Docker</span></li>
+              <li><img src="assets/badges/postgresql.svg" alt="" width="34" height="34"><span>PostgreSQL</span></li>
+              <li><img src="assets/badges/clickhouse.svg" alt="" width="34" height="34"><span>ClickHouse</span></li>
+              <li><img src="assets/badges/redis.svg" alt="" width="34" height="34"><span>Redis</span></li>
+              <li><img src="assets/badges/elasticsearch.svg" alt="" width="34" height="34"><span>Elasticsearch</span></li>
+            </ul>
+          </section>
+
+          <section class="tech-category" aria-labelledby="tech-languages">
+            <h3 id="tech-languages">Languages</h3>
+            <ul class="tech-badges">
+              <li><img src="assets/badges/python.svg" alt="" width="34" height="34"><span>Python</span></li>
+              <li><img src="assets/badges/sql.svg" alt="" width="34" height="34"><span>SQL</span></li>
+              <li><img src="assets/badges/r.svg" alt="" width="34" height="34"><span>R</span></li>
+              <li><img src="assets/badges/c.svg" alt="" width="34" height="34"><span>C</span></li>
+              <li><img src="assets/badges/cplusplus.svg" alt="" width="34" height="34"><span>C++</span></li>
+              <li><img src="assets/badges/bash.svg" alt="" width="34" height="34"><span>Bash</span></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="page-section contacts" id="contacts" aria-labelledby="contacts-title" data-reveal>
+        <div class="contact-card">
+          <img class="contact-card__plane" src="assets/illustrations/paper-plane-transparent.png" width="520" height="404" alt="" loading="lazy">
+          <div class="contact-card__copy"><h2 id="contacts-title">Let's connect!</h2><p>Find me around the web or send a message.</p></div>
+          <div class="contact-card__links">
+            <a href="mailto:kryiska9@gmail.com"><span class="ui-icon ui-icon--mail" aria-hidden="true"></span>Email</a>
+            <a href="https://t.me/samoilov_ma" target="_blank" rel="me noreferrer"><span class="ui-icon ui-icon--telegram" aria-hidden="true"></span>Telegram</a>
+            <a href="https://github.com/Samoilov2004" target="_blank" rel="me noreferrer"><span class="ui-icon ui-icon--github" aria-hidden="true"></span>GitHub</a>
+            <a href="https://www.kaggle.com/samoilovmikhail" target="_blank" rel="me noreferrer"><span class="ui-icon ui-icon--kaggle" aria-hidden="true"></span>Kaggle</a>
+            <a href="https://leetcode.com/u/Cro-Magnon/" target="_blank" rel="me noreferrer"><span class="ui-icon ui-icon--leetcode" aria-hidden="true"></span>LeetCode</a>
+            <a href="https://www.linkedin.com/in/samoilov-mikhail-a10559425" target="_blank" rel="me noreferrer"><span class="ui-icon ui-icon--linkedin" aria-hidden="true"></span>LinkedIn</a>
+          </div>
+          <img class="contact-card__moon" src="assets/illustrations/moon-stars-transparent.png" width="450" height="428" alt="" loading="lazy">
+        </div>
+      </section>
     </div>
-  </div>
-  <div class="nav-mobile-backdrop" id="navBackdrop" aria-hidden="true"></div>
-
-  <!-- ═══════════════════════════ MAIN CONTENT ═══════════════════════════ -->
-  <main id="main">
-
-    <!-- ───────── 1. HERO ───────── -->
-    <section class="hero" id="hero" aria-label="Introduction">
-      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
-
-      <div class="hero-content container">
-        <div class="hero-grid">
-
-          <!-- Left: identity text -->
-          <div class="hero-identity">
-            <div class="hero-status">
-              <span class="status-dot" aria-hidden="true"></span>
-              Currently at Yandex Search
-            </div>
-
-            <h1 class="hero-name reveal reveal-d1">Mikhail Samoilov<span class="cursor" aria-hidden="true"></span></h1>
-
-            <p class="hero-role reveal reveal-d2">DS / ML Engineer</p>
-
-            <p class="hero-degree reveal reveal-d2">
-              M.S. Computer Science Student, Data Scientist in Yandex
-            </p>
-
-            <p class="hero-bio reveal reveal-d3">
-              I build ML systems for large-scale search problems — currently working on antispam at Yandex Search. Background in biophysics at MIPT; now pursuing CS. Drawn to the intersection of rigorous math and systems that ship.
-            </p>
-
-            <div class="hero-cta reveal reveal-d4">
-              <a href="#highlights" class="btn btn-primary btn-lg">
-                View highlights
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-              <a href="#contact" class="btn btn-ghost btn-lg">Get in touch</a>
-            </div>
-
-            <div class="hero-links reveal reveal-d5" aria-label="Social links">
-              <a href="https://github.com/Samoilov2004" class="hero-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/samoilov-mikhail-a10559425" class="hero-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="https://t.me/samoilov_ma" class="hero-link" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M21.8 3.6L2.8 10.9c-1.3.5-1.3 1.2-.2 1.5l4.9 1.5 1.8 5.5c.2.6.1.8.7.8.5 0 .8-.2 1.1-.5l2.7-2.6 5.5 4.1c1 .6 1.7.3 1.9-.9l3.1-15c.3-1.5-.6-2.2-1.5-1.7zM8.2 13.6l10.8-6.8c.5-.3 1-.2.6.2l-8.8 7.9-.3 3.3-1.7-4.6-4.1-1.3 3.5-1.7z"/>
-                </svg>
-              </a>
-              <a href="https://www.kaggle.com/samoilovmikhail" class="hero-link" aria-label="Kaggle" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"/></svg>
-              </a>
-              <a href="https://leetcode.com/u/Cro-Magnon/" class="hero-link" aria-label="LeetCode" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right: photo -->
-          <div class="hero-photo-wrap reveal reveal-d2">
-            <div class="hero-photo">
-              <div class="photo-frame">
-                <div class="photo-bg" aria-hidden="true"></div>
-                <!-- Replace SVG below with: <img src="your-photo.jpg" alt="Mikhail Samoilov" class="photo-silhouette"> -->
-                <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 280 308" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <defs>
-                    <radialGradient id="ph-glow" cx="50%" cy="38%" r="52%">
-                      <stop offset="0%" stop-color="rgba(0,212,255,0.09)"/>
-                      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
-                    </radialGradient>
-                  </defs>
-                  <rect width="280" height="308" fill="url(#ph-glow)"/>
-                  <circle cx="140" cy="106" r="54" fill="rgba(0,212,255,0.05)" stroke="rgba(0,212,255,0.12)" stroke-width="1"/>
-                  <path d="M 28 308 C 32 228 82 186 140 186 C 198 186 248 228 252 308 Z" fill="rgba(0,212,255,0.03)" stroke="rgba(0,212,255,0.08)" stroke-width="1"/>
-                  <rect x="14" y="14" width="252" height="280" rx="18" fill="none" stroke="rgba(0,212,255,0.07)" stroke-width="1" stroke-dasharray="5 5"/>
-                </svg>
-              </div>
-            </div>
-            <p class="photo-hint-label">[ your photo here ]</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────── 2. EXPERIENCE + EDUCATION ───────── -->
-    <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Background</span>
-          <h2 class="section-heading" id="experience-heading">My journey</h2>
-        </div>
-
-        <!-- Tab navigation -->
-        <div class="exp-tabs reveal" role="tablist" aria-label="Background sections">
-          <button class="exp-tab exp-tab--active" data-tab="work" role="tab" id="tab-btn-work" aria-selected="true" aria-controls="tab-work">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Work
-          </button>
-          <button class="exp-tab" data-tab="education" role="tab" id="tab-btn-education" aria-selected="false" aria-controls="tab-education">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            Education
-          </button>
-        </div>
-
-        <!-- ── Work Tab ── -->
-        <div class="exp-panel" id="tab-work" role="tabpanel" aria-labelledby="tab-btn-work">
-        <div class="timeline" role="list">
-
-          <div class="timeline-item reveal" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="timeline-dot timeline-dot--active"></div>
-              <div class="timeline-line timeline-line--last"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-head">
-                <div class="timeline-head-left">
-                  <div class="timeline-logo" aria-hidden="true">
-                    <img src="assets/logos/yandex.svg" alt="">
-                  </div>
-                  <div>
-                    <h3 class="timeline-role">Analyst Developer — Search Antispam / Antifraud</h3>
-                    <span class="timeline-company">Yandex Search</span>
-                  </div>
-                </div>
-                <div class="timeline-meta">
-                  <span class="timeline-period">Feb 2025 — Present</span>
-                  <span class="timeline-location">Moscow, Russia</span>
-                </div>
-              </div>
-              <p class="timeline-desc">
-                Developing ML products end-to-end: training and integrating models for spam and harmful-content filtering, automating crowd-labeling workflows, and conducting technical interviews in analytics and Python.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">ML</span>
-                <span class="tech-badge">Search</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        </div><!-- /tab-work -->
-
-        <!-- ── Education Tab ── -->
-        <div class="exp-panel exp-panel--hidden" id="tab-education" role="tabpanel" aria-labelledby="tab-btn-education">
-        <div class="timeline" role="list">
-
-          <div class="timeline-item reveal" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="timeline-dot"></div>
-              <div class="timeline-line"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-head">
-                <div class="timeline-head-left">
-                  <div class="timeline-logo" aria-hidden="true">
-                    <div class="timeline-logo" aria-hidden="true">
-                      <img src="assets/logos/hse.svg" alt="">
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="timeline-role">M.S. Computer Science</h3>
-                    <span class="timeline-company">HSE — Higher School of Economics, Moscow</span>
-                  </div>
-                </div>
-                <div class="timeline-meta">
-                  <span class="timeline-period">2026 — 2028</span>
-                  <span class="timeline-location">Planned</span>
-                </div>
-              </div>
-              <p class="timeline-desc">
-                Upcoming master's programme in Computer Science.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-d1" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="timeline-dot timeline-dot--active"></div>
-              <div class="timeline-line"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-head">
-                <div class="timeline-head-left">
-                  <div class="timeline-logo" aria-hidden="true">
-                    <div class="timeline-logo" aria-hidden="true">
-                      <img class="logo-light" src="assets/logos/rosbiotech_dark.svg" alt="">
-                      <img class="logo-dark" src="assets/logos/rosbiotech_light.svg" alt="">
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="timeline-role">B.S. Computer Science</h3>
-                    <span class="timeline-company">ROSBIOTECH, Moscow</span>
-                  </div>
-                </div>
-                <div class="timeline-meta">
-                  <span class="timeline-period">2024 — 2026</span>
-                  <span class="timeline-location">Moscow, Russia</span>
-                </div>
-              </div>
-              <p class="timeline-desc">
-                Bachelor's programme in Computer Science. Currently enrolled.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-badge">Algorithms</span>
-                <span class="tech-badge">Machine Learning</span>
-                <span class="tech-badge">Computer Science</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-d2" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="timeline-dot"></div>
-              <div class="timeline-line"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-head">
-                <div class="timeline-head-left">
-                  <div class="timeline-logo" aria-hidden="true">
-                    <div class="timeline-logo" aria-hidden="true">
-                      <img src="assets/logos/mipt.svg" alt="">
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="timeline-role">B.S. Biophysics</h3>
-                    <span class="timeline-company">MIPT — Moscow Institute of Physics and Technology</span>
-                  </div>
-                </div>
-                <div class="timeline-meta">
-                  <span class="timeline-period">2022 — 2024</span>
-                  <span class="timeline-location">Moscow, Russia</span>
-                </div>
-              </div>
-              <p class="timeline-desc">
-                Studied biophysics with a strong mathematical and scientific foundation. Coursework in physics, mathematics, and computational modelling.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-badge">Biophysics</span>
-                <span class="tech-badge">Mathematics</span>
-                <span class="tech-badge">Computational Modelling</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-d3" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="timeline-dot"></div>
-              <div class="timeline-line timeline-line--last"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="timeline-head">
-                <div class="timeline-head-left">
-                  <div class="timeline-logo" aria-hidden="true">
-                    <div class="timeline-logo" aria-hidden="true">
-                      <img src="assets/logos/school_cpm.svg" alt="">
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="timeline-role">High School</h3>
-                    <span class="timeline-company">CPM Private School, Moscow</span>
-                  </div>
-                </div>
-                <div class="timeline-meta">
-                  <span class="timeline-period">until 2022</span>
-                  <span class="timeline-location">Moscow, Russia</span>
-                </div>
-              </div>
-              <p class="timeline-desc">
-                Graduated from CPM Private School in Moscow with a focus on informatics and natural sciences (major chemistry).
-              </p>
-            </div>
-          </div>
-
-        </div>
-        </div><!-- /tab-education -->
-
-      </div>
-    </section>
-
-    <!-- ───────── 3. SELECTED HIGHLIGHTS ───────── -->
-    <section class="section highlights-section" id="highlights" aria-labelledby="highlights-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Achievements</span>
-          <h2 class="section-heading" id="highlights-heading">Beyond the role.</h2>
-          <p class="section-sub">Recognitions, open-source work, and research that add context beyond job titles and degrees.</p>
-        </div>
-
-        <div class="highlights-tabs reveal" role="tablist" aria-label="Achievement categories">
-          <button class="highlights-tab highlights-tab--active" type="button" role="tab" id="highlights-tab-recognition" aria-selected="true" aria-controls="highlights-panel-recognition" data-highlight-tab="recognition" tabindex="0">
-            Recognition
-          </button>
-          <button class="highlights-tab" type="button" role="tab" id="highlights-tab-open-source" aria-selected="false" aria-controls="highlights-panel-open-source" data-highlight-tab="open-source" tabindex="-1">
-            Open Source
-          </button>
-          <button class="highlights-tab" type="button" role="tab" id="highlights-tab-research" aria-selected="false" aria-controls="highlights-panel-research" data-highlight-tab="research" tabindex="-1">
-            Research
-          </button>
-        </div>
-
-        <div class="highlights-panels reveal">
-          <div class="highlights-panel" id="highlights-panel-recognition" role="tabpanel" aria-labelledby="highlights-tab-recognition" tabindex="0">
-            <div class="recognition-grid">
-              <article class="highlight-card highlight-card--olympiad">
-                <div class="highlight-card-topline">
-                  <div>
-                    <span class="highlight-eyebrow">National Olympiad · Chemistry</span>
-                    <span class="highlight-repo">Final stage · Year to be added</span>
-                  </div>
-                  <span class="highlight-status highlight-status--award">Prize winner</span>
-                </div>
-                <div class="highlight-card-body">
-                  <h3 class="highlight-title">All-Russian School Olympiad in Chemistry</h3>
-                  <p class="highlight-description">
-                    Prize winner at the final stage of Russia's national academic olympiad for school students.
-                  </p>
-                </div>
-              </article>
-
-              <article class="highlight-card highlight-card--kaggle">
-                <div class="highlight-card-topline">
-                  <div>
-                    <span class="highlight-eyebrow">Kaggle · Community Rank</span>
-                    <span class="highlight-repo">Public profile recognition</span>
-                  </div>
-                </div>
-                <div class="highlight-card-body">
-                  <h3 class="highlight-title">Notebooks Expert</h3>
-                  <p class="highlight-description">
-                    Recognized contributor in Kaggle's public notebook community, with published data-analysis work available on the profile.
-                  </p>
-                </div>
-                <div class="highlight-actions">
-                  <a class="highlight-link highlight-link--primary" href="https://www.kaggle.com/samoilovmikhail" target="_blank" rel="noopener noreferrer">View Kaggle profile</a>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="highlights-panel" id="highlights-panel-open-source" role="tabpanel" aria-labelledby="highlights-tab-open-source" tabindex="0" hidden>
-            <article class="contribution-board">
-              <div class="highlight-card-topline">
-                <div>
-                  <span class="highlight-eyebrow">Upstream contributions</span>
-                  <span class="highlight-repo">Selected pull requests to open-source projects</span>
-                </div>
-                <span class="contribution-count" id="openSourceCount" aria-live="polite">Loading contributions…</span>
-              </div>
-
-              <div class="contribution-list" id="openSourceList" aria-live="polite"></div>
-            </article>
-          </div>
-
-          <div class="highlights-panel" id="highlights-panel-research" role="tabpanel" aria-labelledby="highlights-tab-research" tabindex="0" hidden>
-            <article class="research-record">
-              <div class="research-record-intro">
-                <span class="highlight-eyebrow">Research notes &amp; publications</span>
-                <p>Selected work presented as supporting evidence, without turning the portfolio into a publication catalogue.</p>
-              </div>
-
-              <div class="research-list">
-                <section class="research-item" aria-labelledby="research-ugolki-title">
-                  <div class="research-item-copy">
-                    <div class="research-item-meta">Conference thesis · Awaiting publication · 2026</div>
-                    <h3 class="research-item-title" id="research-ugolki-title">How PER prioritization α affects a self-play DQN agent in Ugolki</h3>
-                    <p class="research-item-description">An ablation study of Prioritized Experience Replay in a reinforcement-learning agent trained through self-play.</p>
-                  </div>
-                  <a class="research-item-link" href="https://github.com/Samoilov2004/UgolkiEngine/blob/main/report/%D0%A1%D0%B0%D0%BC%D0%BE%D0%B9%D0%BB%D0%BE%D0%B2_%D1%82%D0%B5%D0%B7%D0%B8%D1%81%D1%8B.pdf" target="_blank" rel="noopener noreferrer">Read draft thesis</a>
-                </section>
-
-                <section class="research-item" aria-labelledby="research-oceanology-title">
-                  <div class="research-item-copy">
-                    <div class="research-item-meta">Oceanology · Publication series</div>
-                    <h3 class="research-item-title" id="research-oceanology-title">Data preparation for oceanological research</h3>
-                    <p class="research-item-description">Contributed data cleaning, preprocessing, quality control, and preparation of observational datasets for analysis.</p>
-                    <div class="publication-links" aria-label="Oceanology publications on eLibrary">
-                      <a href="https://elibrary.ru/item.asp?id=70654130" target="_blank" rel="noopener noreferrer">eLibrary 70654130</a>
-                      <a href="https://elibrary.ru/item.asp?id=70654145" target="_blank" rel="noopener noreferrer">eLibrary 70654145</a>
-                      <a href="https://elibrary.ru/item.asp?id=71256561" target="_blank" rel="noopener noreferrer">eLibrary 71256561</a>
-                      <a href="https://elibrary.ru/item.asp?id=54886825" target="_blank" rel="noopener noreferrer">eLibrary 54886825</a>
-                      <a href="https://elibrary.ru/item.asp?id=54886862" target="_blank" rel="noopener noreferrer">eLibrary 54886862</a>
-                      <a href="https://elibrary.ru/item.asp?id=54977545" target="_blank" rel="noopener noreferrer">eLibrary 54977545</a>
-                      <a href="https://elibrary.ru/item.asp?id=54886911" target="_blank" rel="noopener noreferrer">eLibrary 54886911</a>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────── 4. SKILLS ───────── -->
-    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Expertise</span>
-      <h2 class="section-heading" id="skills-heading">Tools of the trade</h2>
-      <p class="section-sub">Frameworks, languages, and platforms I rely on when building production data science and ML systems.</p>
-    </div>
-
-    <div class="skills-layout reveal" id="skillsList" aria-live="polite"></div>
-  </div>
-</section>
-
-    <!-- ───────── 5. CONTACT ───────── -->
-    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Get in Touch</span>
-          <h2 class="section-heading" id="contact-heading">Let's build something<br>worth building.</h2>
-          <p class="section-sub">Open to research collaborations, open-source contributions, and conversations about ML systems. If you're working on a hard problem, I'd love to hear about it.</p>
-        </div>
-
-        <div class="contact-grid reveal">
-
-          <a href="mailto:kryiska9@gmail.com" class="contact-card-new">
-            <div class="contact-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <span class="contact-card-label">Email</span>
-            <span class="contact-card-value">kryiska9@gmail.com</span>
-          </a>
-
-          <a href="https://t.me/samoilov_ma" class="contact-card-new" target="_blank" rel="noopener noreferrer">
-            <div class="contact-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M21.8 3.6L2.8 10.9c-1.3.5-1.3 1.2-.2 1.5l4.9 1.5 1.8 5.5c.2.6.1.8.7.8.5 0 .8-.2 1.1-.5l2.7-2.6 5.5 4.1c1 .6 1.7.3 1.9-.9l3.1-15c.3-1.5-.6-2.2-1.5-1.7zM8.2 13.6l10.8-6.8c.5-.3 1-.2.6.2l-8.8 7.9-.3 3.3-1.7-4.6-4.1-1.3 3.5-1.7z"/>
-              </svg>
-            </div>
-            <span class="contact-card-label">Telegram</span>
-            <span class="contact-card-value">@samoilov_ma</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/samoilov-mikhail-a10559425" class="contact-card-new" target="_blank" rel="noopener noreferrer">
-            <div class="contact-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            </div>
-            <span class="contact-card-label">LinkedIn</span>
-            <span class="contact-card-value">linkedin.com</span>
-          </a>
-
-          <a href="https://github.com/Samoilov2004" class="contact-card-new" target="_blank" rel="noopener noreferrer">
-            <div class="contact-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            </div>
-            <span class="contact-card-label">GitHub</span>
-            <span class="contact-card-value">Samoilov2004</span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-inner">
-
-        <div class="footer-brand">
-          <a href="#" class="footer-logo" aria-label="Mikhail Samoilov — back to top">
-            <span class="nav-logo-mark" aria-hidden="true">MS</span>
-            <span class="nav-logo-name">Mikhail Samoilov</span>
-          </a>
-          <p class="footer-tagline">Building intelligent systems,<br>one model at a time.</p>
-          <div class="footer-social" role="list" aria-label="Social links">
-            <a href="https://github.com/Samoilov2004" class="footer-social-link" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer" role="listitem">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/samoilov-mikhail-a10559425" class="footer-social-link" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer" role="listitem">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://t.me/samoilov_ma" class="footer-social-link" aria-label="Telegram profile" target="_blank" rel="noopener noreferrer" role="listitem">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M21.8 3.6L2.8 10.9c-1.3.5-1.3 1.2-.2 1.5l4.9 1.5 1.8 5.5c.2.6.1.8.7.8.5 0 .8-.2 1.1-.5l2.7-2.6 5.5 4.1c1 .6 1.7.3 1.9-.9l3.1-15c.3-1.5-.6-2.2-1.5-1.7zM8.2 13.6l10.8-6.8c.5-.3 1-.2.6.2l-8.8 7.9-.3 3.3-1.7-4.6-4.1-1.3 3.5-1.7z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <div class="footer-nav-col">
-            <span class="footer-nav-heading">Pages</span>
-            <a href="#experience" class="footer-nav-link">Experience</a>
-            <a href="#highlights" class="footer-nav-link">Highlights</a>
-            <a href="#skills" class="footer-nav-link">Skills</a>
-            <a href="#contact" class="footer-nav-link">Contact</a>
-          </div>
-          <div class="footer-nav-col">
-            <span class="footer-nav-heading">Highlights</span>
-            <a href="#highlights" class="footer-nav-link" data-highlight-target="recognition">Recognition</a>
-            <a href="#highlights" class="footer-nav-link" data-highlight-target="open-source">Open Source</a>
-            <a href="#highlights" class="footer-nav-link" data-highlight-target="research">Research</a>
-          </div>
-          <div class="footer-nav-col">
-            <span class="footer-nav-heading">Connect</span>
-            <a href="https://github.com/Samoilov2004" class="footer-nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/samoilov-mikhail-a10559425" class="footer-nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://t.me/samoilov_ma" class="footer-nav-link" target="_blank" rel="noopener noreferrer">Telegram</a>
-            <a href="mailto:kryiska9@gmail.com" class="footer-nav-link">Email</a>
-          </div>
-        </nav>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copy">2026 Mikhail Samoilov. Designed and built by hand, claude, codex, qwen etc.</p>
-        <p class="footer-made">Funny block.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top of page">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
-  </button>
-
-  <script src="js/animations.js"></script>
-  <script src="js/ui.js"></script>
-  <script src="data/open-source.js"></script>
-  <script src="data/skills.js"></script>
-  <script src="js/content.js"></script>
-  <script src="js/main.js"></script>
-
+  <footer class="site-footer"><p>Mikhail Samoilov</p><a href="#top">Back to top</a></footer>
 </body>
 </html>
